@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NLP Practical - POS Tagging</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>📝 NLP Practical</h1>
+            <p>Part-of-Speech Tagging Application</p>
+        </header>
+
+        <section class="input-section">
+            <label for="sentence">Enter your sentence</label>
+
+            <textarea
+                id="sentence"
+                placeholder="Example: The intelligent student studies Python carefully."
+                rows="4"
+            ></textarea>
+
+            <button id="tagButton" onclick="performTagging()">
+                Perform POS Tagging
+            </button>
+
+            <p id="status" role="status"></p>
+        </section>
+
+        <section id="resultsSection" class="results-section" hidden>
+            <h2>Tokenized Words</h2>
+            <div id="tokens" class="tokens"></div>
+
+            <h2>POS Tagging Results</h2>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Word</th>
+                            <th>POS Tag</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody id="resultsBody"></tbody>
+                </table>
+            </div>
+
+            <button id="downloadButton" onclick="downloadCSV()">
+                Download Results (CSV)
+            </button>
+        </section>
+
+        <footer>
+            <p>NLP Experiment | Python, Flask, NLTK and JavaScript</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
